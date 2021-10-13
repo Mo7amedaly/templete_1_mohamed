@@ -1,0 +1,427 @@
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { ... } */
+
+
+/*start define Roboto Font*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../../assets/fonts/family/Roboto/Roboto-Regular.eot');
+    src: url('../../assets/fonts/family/Roboto/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/family/Roboto/Roboto-Regular.woff2') format('woff2'), url('../../assets/fonts/family/Roboto/Roboto-Regular.woff') format('woff'), url('../../assets/fonts/family/Roboto/Roboto-Regular.ttf') format('truetype'), url('../../assets/fonts/family/Roboto/Roboto-Regular.svg#Roboto-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*end*/
+
+
+/*start define Lato font*/
+
+@font-face {
+    font-family: 'Lato';
+    src: url('../../assets/fonts/family/Lato/Lato-Regular.eot');
+    src: url('../../assets/fonts/family/Lato/Lato-Regular.eot?#iefix') format('embedded-opentype'), url('../../assets/fonts/family/Lato/Lato-Regular.woff2') format('woff2'), url('../../assets/fonts/family/Lato/Lato-Regular.woff') format('woff'), url('../../assets/fonts/family/Lato/Lato-Regular.ttf') format('truetype'), url('../../assets/fonts/family/Lato/Lato-Regular.svg#Lato-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/*end*/
+
+
+/*start define font classes */
+
+.title-font {
+    font-family: 'Roboto', sans-serif;
+}
+
+.text-font {
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+/*end*/
+
+
+/*start style navbar*/
+
+.sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    text-align: center;
+    color: rgba(13, 110, 253, 0.6);
+}
+
+@media (max-width: 991.99px) {
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active {
+        background-color: rgba(13, 110, 253, 1);
+        color: white;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-light .navbar-nav .nav-link:hover,
+    .navbar-light .navbar-nav .nav-link.active {
+        color: rgba(13, 110, 253, 1);
+        position: relative;
+    }
+    .navbar-light .navbar-nav .nav-link:hover:after,
+    .navbar-light .navbar-nav .nav-link.active:after {
+        content: '';
+        position: absolute;
+        top: 90%;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: rgba(13, 110, 253, 1);
+    }
+}
+
+@media (max-width: 991.99px) {
+    .dropdown-menu-end[data-bs-popper] {
+        right: auto;
+        left: 0;
+    }
+}
+
+.navbar-light .navbar-toggler {
+    color: rgba(13, 110, 253, 0.55);
+    border-color: rgba(13, 110, 253, 0.1);
+}
+
+
+/*end*/
+
+
+/*start style header section*/
+
+.sec-header {
+    background-image: url('../../assets/images/header/header.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    height: calc(100vh - 76px);
+}
+
+@media (min-width: 992px) {
+    .sec-header {
+        height: calc(100vh - 108px);
+    }
+}
+
+
+/*end*/
+
+
+/*start style sections */
+
+.sec {
+    padding: 35px 0;
+}
+
+@media (min-width: 992px) {
+    .sec {
+        padding: 55px 0;
+    }
+}
+
+
+/*end*/
+
+
+/*start style main-title component*/
+
+.main-title {
+    text-transform: capitalize;
+    font-weight: bolder;
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 30px;
+}
+
+.main-title::before {
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    transform: skewX(-10deg);
+    top: 10px;
+    left: -30px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: rgb(13, 110, 253);
+}
+
+.main-title::after {
+    content: '';
+    position: absolute;
+    border-radius: 3px;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    width: 50%;
+    height: 4px;
+    background: rgb(13, 110, 253);
+}
+
+.bgc-light {
+    background: rgb(231, 244, 246);
+}
+
+
+/*end*/
+
+
+/*start style about section*/
+
+
+/*end*/
+
+
+/*start icons style sizes classes  */
+
+.fa-lg {
+    font-size: 1.33333em;
+    line-height: 0.75em;
+    vertical-align: -0.0667em;
+}
+
+.fa-xs {
+    font-size: 0.75em;
+}
+
+.fa-sm {
+    font-size: 0.875em;
+}
+
+.fa-1x {
+    font-size: 1em;
+}
+
+.fa-2x {
+    font-size: 2em;
+}
+
+.fa-3x {
+    font-size: 3em;
+}
+
+.fa-4x {
+    font-size: 4em;
+}
+
+.fa-5x {
+    font-size: 5em;
+}
+
+.fa-6x {
+    font-size: 6em;
+}
+
+.fa-7x {
+    font-size: 7em;
+}
+
+.fa-8x {
+    font-size: 8em;
+}
+
+.fa-9x {
+    font-size: 9em;
+}
+
+.fa-10x {
+    font-size: 10em;
+}
+
+.fa-fw {
+    text-align: center;
+    width: 1.25em;
+}
+
+
+/*end*/
+
+.carousel-control-prev:hover,
+.carousel-control-prev:focus,
+.carousel-control-next:hover,
+.carousel-control-next:focus {
+    color: #fff;
+    text-decoration: none;
+    outline: 0;
+    opacity: 0.9;
+}
+
+button:not(:disabled),
+[type=button]:not(:disabled),
+[type=reset]:not(:disabled),
+[type=submit]:not(:disabled) {
+    cursor: pointer;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: auto;
+    background: #0d6efd;
+    fill: white;
+    right: 0;
+    padding: 5px;
+    border-radius: 5px;
+    top: -55px;
+    bottom: auto;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+}
+
+
+/*start style ourteam Section*/
+
+.sec--team {
+    background-image: linear-gradient( to right, rgba(231, 244, 246, 0.3), rgba(101, 199, 247, 0.3), rgba(13, 110, 253, 0.3)), url(../../assets/images/bg/team-bg.jpg);
+}
+
+.nav-fill>.nav-link,
+.nav-fill .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.nav-tabs .nav-link {
+    margin-bottom: -1px;
+    background: none;
+    border: 1px solid transparent;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+}
+
+
+/*end*/
+
+
+/*start style Tracks Section*/
+
+.sec--tracks {
+    background-image: linear-gradient( 45deg, rgba(231, 244, 246, 0.7), rgba(101, 199, 247, 0.7), rgba(13, 110, 253, 0.7));
+}
+
+.track__image__container {
+    width: 55px;
+    height: 55px;
+}
+
+.track__image {
+    width: 30px;
+    height: 30px;
+}
+
+
+/*end*/
+
+
+/*start style contact Section*/
+
+.sec--contact {
+    background-image: linear-gradient( to top, rgba(231, 244, 246, 0.95), rgba(101, 199, 247, 0.95), rgba(13, 110, 253, 0.4)), url(../../assets/images/bg/contact-bg.png);
+}
+
+.bg-img {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+}
+
+.contact__map {
+    min-height: 450px;
+}
+
+
+/*end*/
+
+
+/*start style footer Section*/
+
+footer {
+    color: #f1e9e5;
+}
+
+.social-icons__item {
+    margin-right: 10px;
+}
+
+.social-icons__item__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #fff;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.social-icons__item__link__icon {
+    font-size: 18px;
+    font-weight: bold;
+    transition: transform 0.7s ease;
+    transition-property: transform;
+    transition-duration: 0.7s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+
+/*end*/
